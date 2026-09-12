@@ -13,7 +13,7 @@ export default function SignInForm({ onSubmit }) {
 
   return (
     <div className="w-full max-w-md rounded-3xl border border-white/10 bg-[#111111] p-8 sm:p-10">
-      <h2 className="text-3xl font-extrabold text-white">Sign in</h2>
+      <h2 className="text-3xl font-extrabold text-white syne-font">Sign in</h2>
       <p className="mt-2 text-white/50">Enter your credentials to continue</p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-4">
@@ -60,7 +60,7 @@ export default function SignInForm({ onSubmit }) {
         {/* Submit */}
         <button
           type="submit"
-          className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#CFFF04] py-4 font-bold text-black transition-transform hover:brightness-95 active:scale-[0.99]"
+          className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#CFFF04] py-4 font-bold text-black transition-transform hover:brightness-95 active:scale-[0.99] syne-font"
         >
           Sign in
           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

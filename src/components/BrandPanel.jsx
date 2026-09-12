@@ -11,15 +11,15 @@ export default function BrandPanel() {
       <Logo />
 
       <div className="relative z-10 mt-16 max-w-xl lg:mt-0">
-        <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#CFFF04]">
+        <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#CFFF04] dm-sans-font">
           WELCOME BACK
         </p>
-        <h1 className="text-5xl font-extrabold leading-[1.05] text-white sm:text-6xl">
+        <h1 className="text-5xl font-bold leading-[1.05] text-white sm:text-6xl dm-sans-font">
           Shop the future.
           <br />
           <span className="text-[#CFFF04]">Today.</span>
         </h1>
-        <p className="mt-6 max-w-md text-lg text-white/50">
+        <p className="mt-6 max-w-md text-lg text-white/50 dm-sans-font">
           Thousands of products, lightning-fast delivery, and prices that
           make your wallet happy.
         </p>
