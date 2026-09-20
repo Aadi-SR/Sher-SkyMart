@@ -21,7 +21,7 @@ export default function SignUpForm() {
 
   const submitHandler = async (data) => {
     try {
-      const previousUsers = getLS(import.meta.env.SK_USER_LIST_KEY) || [];
+      const previousUsers = getLS("skymart-user-list") || [];
       console.log("Previous Users:", previousUsers);
 
       if (previousUsers.some((user) => user.email === data.email)) {
@@ -32,7 +32,7 @@ export default function SignUpForm() {
       toast.success("Account created successfully!");
       navigate("/");
 
-      setLS(import.meta.env.SK_USER_LIST_KEY, [...previousUsers, data]);
+      setLS("skymart-user-list", [...previousUsers, data]);
     } catch (err) {
       console.error(err);
     }

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 import useAuth from "../hooks/AuthHooks";
 
 export default function SignInForm() {
-  const { getLS } = useAuth();
+  const { getLS, setLS } = useAuth();
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -21,7 +21,8 @@ export default function SignInForm() {
     try {
       console.log("Form Data:", data);
 
-      let users = getLS(import.meta.env.SK_USER_LIST_KEY) || [];
+      let users = getLS("skymart-user-list") || [];
+      console.log("Users from localStorage:", users);
       let user = users.find((user) => user.email === data.email && user.password === data.password);
 
       if (!user) {
@@ -31,6 +32,8 @@ export default function SignInForm() {
 
       toast.success("Signed in successfully!");
       navigate("/main");
+      console.log("Current User Key:", "skymart-current-user");
+      setLS("skymart-current-user", user);
     } catch (err) {
       toast.error(err?.message || "Invalid email or password");
     }
