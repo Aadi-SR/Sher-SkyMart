@@ -77,11 +77,11 @@ const Navbar = () => {
           <button
             type="button"
             aria-label="Cart"
-            className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+            className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 text-white/80 transition-colors hover:bg-white/10 hover:text-white cursor-pointer border border-white/30"
           >
             <ShoppingCart className="h-4.5 w-4.5" />
             {cartCount > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-[#CFFF04] px-1 text-[11px] font-bold text-black">
+              <span className="absolute -top-1.5 -right-1.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-[#CFFF04] px-1 text-[11px] font-bold text-black ">
                 {cartCount}
               </span>
             )}
@@ -92,7 +92,7 @@ const Navbar = () => {
             type="button"
             aria-label="Log out"
             onClick={logout}
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+            className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 text-white/80 transition-colors hover:bg-red-600/30 hover:text-white border border-white/30 cursor-pointer"
           >
             <LogOut className="h-4.5 w-4.5" />
           </button>
